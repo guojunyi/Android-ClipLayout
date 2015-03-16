@@ -1,6 +1,8 @@
 Android-ClipLayout
 ================
 ![](https://raw.githubusercontent.com/guojunyi/Android-ClipLayout/master/screenshot/1.gif)
+## Sample Application
+<a href="https://raw.githubusercontent.com/guojunyi/Android-ClipLayout/master/apk/ClipLayout.apk" target="_blank" title="Download From Google Play">Click to Download the simple apk</a>
 
 ## Usage
 ``` xml
