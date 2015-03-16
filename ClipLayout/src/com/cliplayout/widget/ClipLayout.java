@@ -91,9 +91,6 @@ public class ClipLayout extends RelativeLayout {
 				}
 				
 				clipPage.setRadius(frameValue);
-
-				invalidateChild(clipPage.getView(), new Rect(0, 0, getWidth(),
-						getHeight()));
 				invalidate(new Rect(0, 0, getWidth(),
 						getHeight()));
 
@@ -129,9 +126,6 @@ public class ClipLayout extends RelativeLayout {
 						//clipPage pop end
 						clipPage.onClipPagePopEnd();
 					}
-					
-					invalidateChild(clipPage.getView(), new Rect(0, 0, getWidth(),
-							getHeight()));
 					invalidate(new Rect(0, 0, getWidth(),
 							getHeight()));
 				}
