@@ -188,7 +188,6 @@ public class ClipLayout extends RelativeLayout {
 			return super.drawChild(canvas, child, drawingTime);
 		}
 
-		//final int state = canvas.save();
 		Path path = new Path();
 
 		path.addCircle(clipPage.getCx(), clipPage.getCy(), clipPage.getRadius(),
@@ -198,7 +197,6 @@ public class ClipLayout extends RelativeLayout {
 
 		boolean isInvalided = super.drawChild(canvas, child, drawingTime);
 
-		//canvas.restoreToCount(state);
 
 		if (popFlag && clipPage.getRadius() == clipPage.getStartRadius()) {
 			popFlag = false;
