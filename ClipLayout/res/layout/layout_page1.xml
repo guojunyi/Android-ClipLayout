@@ -1,0 +1,69 @@
+<com.cliplayout.widget.ClipLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:id="@+id/layout_clip"
+    android:background="#fff"
+    xmlns:gjy="http://schemas.android.com/apk/res/com.cliplayout" 
+    >
+
+    <RelativeLayout 
+        android:id="@+id/layout_title"
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:background="#03A9F4"
+        >
+       	<LinearLayout 
+       	    android:layout_width="match_parent"
+       	    android:layout_height="49dp"
+       	    android:orientation="horizontal"
+       	    >
+       	    <ImageView 
+       	        android:id="@+id/image_back"
+       	        android:layout_width="49dp"
+       	        android:layout_height="49dp"
+       	        android:src="@drawable/ic_arrow"
+       	        android:scaleType="center"
+       	        />
+       	</LinearLayout>
+        
+        <TextView 
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/app_name"
+            android:textColor="#fff"
+            android:layout_centerInParent="true"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            />
+        
+    </RelativeLayout>
+   	
+   	<ListView 
+   	    android:id="@+id/listView"
+   	    android:layout_width="match_parent"
+   	    android:layout_height="match_parent"
+   	    android:layout_below="@+id/layout_title"
+   	    android:cacheColorHint="@null"
+   	    android:background="#fff"
+   	    android:divider="@null"
+   	    android:dividerHeight="1px"
+   	    >
+   	    
+   	</ListView>
+   	<com.cliplayout.widget.CircleButton
+   	    android:id="@+id/button"
+   	    android:layout_width="50dp"
+   	    android:layout_height="50dp"
+   	    android:layout_alignParentRight="true"
+   	    android:layout_marginRight="32dp"
+   	    android:layout_alignParentBottom="true"
+   	    android:layout_marginBottom="32dp"
+   	    android:src="@drawable/ic_add"
+   	    android:scaleType="center"
+   	    gjy:color="#E040FB"
+   	    android:visibility="gone"
+   	    >
+   	    
+   	</com.cliplayout.widget.CircleButton>
+</com.cliplayout.widget.ClipLayout>
