@@ -1,0 +1,19 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#212121"
+    xmlns:gjy="http://schemas.android.com/apk/res/com.cliplayout" 
+    >
+    
+    <ListView 
+        android:id="@+id/listView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#00000000"
+        android:cacheColorHint="@null"
+        android:divider="@null"
+        >
+        
+    </ListView>
+
+</RelativeLayout>

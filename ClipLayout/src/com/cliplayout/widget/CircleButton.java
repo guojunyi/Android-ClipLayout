@@ -1,6 +1,7 @@
 package com.cliplayout.widget;
 
 import com.cliplayout.R;
+import com.cliplayout.R.styleable;
 
 import android.content.Context;
 import android.content.res.TypedArray;

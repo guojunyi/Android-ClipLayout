@@ -1,6 +1,5 @@
 package com.cliplayout;
 
-import java.util.ArrayList;
 import java.util.Arrays;
 
 import android.content.Context;
@@ -9,22 +8,16 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.View.OnClickListener;
-import android.widget.AbsListView;
-import android.widget.AbsListView.OnScrollListener;
 import android.widget.AdapterView;
 import android.widget.AdapterView.OnItemClickListener;
-import android.widget.Button;
 import android.widget.ImageView;
-import android.widget.LinearLayout;
 import android.widget.ListView;
-import android.widget.RelativeLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
 import com.cliplayout.adapter.CommonAdapter;
 import com.cliplayout.adapter.ViewHolder;
 import com.cliplayout.widget.CircleButton;
-import com.cliplayout.widget.ClipLayout;
 import com.cliplayout.widget.ClipPage;
 import com.nineoldandroids.animation.ObjectAnimator;
 
@@ -40,11 +33,17 @@ public class ClipPageOne extends ClipPage implements OnClickListener{
 	static String[] adapterData = new String[] { "A", "B", "C", "D", "E", "F",
 		"G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R",
 		"S", "T", "U", "V", "W", "X", "Y", "Z" };
+	
+	public ClipPageOne(Context context) {
+		super(context);
+		// TODO Auto-generated constructor stub
+	}
+	
 	@Override
-	public View onCreateView(Context context,LayoutInflater inflater, ClipLayout container) {
+	public View onCreateView(Context context) {
 		// TODO Auto-generated method stub
 		mContext = context;
-		View view = inflater.inflate(R.layout.layout_page1, null);
+		View view = LayoutInflater.from(context).inflate(R.layout.layout_page1, null);
 		initComponent(view);
 		return view;
 	}
@@ -102,7 +101,7 @@ public class ClipPageOne extends ClipPage implements OnClickListener{
 		// TODO Auto-generated method stub
 		switch(v.getId()){
 		case R.id.button:
-			ClipPageTwo clipPage = new ClipPageTwo();
+			ClipPageTwo clipPage = new ClipPageTwo(mContext);
 			clipPage.setCx(button.getLeft()+button.getWidth()/2);
 			clipPage.setCy(button.getTop()+button.getHeight()/2);
 			this.getClipLayout().pushClipPage(clipPage);

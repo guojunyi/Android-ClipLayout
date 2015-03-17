@@ -1,8 +1,6 @@
-<com.cliplayout.widget.ClipLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
-    android:id="@+id/layout_clip"
     android:background="#C8E6C9"
     xmlns:gjy="http://schemas.android.com/apk/res/com.cliplayout" 
     >
@@ -53,4 +51,4 @@
    	    >
    	    
    	</com.cliplayout.widget.CircleButton>
-</com.cliplayout.widget.ClipLayout>
+</RelativeLayout>

@@ -6,16 +6,12 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.View.OnClickListener;
-import android.view.ViewTreeObserver.OnGlobalLayoutListener;
 import android.widget.ImageView;
 
 import com.cliplayout.widget.CircleButton;
-import com.cliplayout.widget.ClipLayout;
 import com.cliplayout.widget.ClipPage;
 import com.nineoldandroids.animation.Animator;
-import com.nineoldandroids.animation.ValueAnimator;
 import com.nineoldandroids.animation.Animator.AnimatorListener;
-import com.nineoldandroids.animation.ValueAnimator.AnimatorUpdateListener;
 import com.nineoldandroids.animation.ObjectAnimator;
 
 public class ClipPageTwo extends ClipPage implements OnClickListener{
@@ -23,12 +19,21 @@ public class ClipPageTwo extends ClipPage implements OnClickListener{
 	CircleButton button;
 	ImageView image_back;
 	Handler mHandler = new Handler();
-	
+	Context mContext;
 	boolean animTag;
+	
+	public ClipPageTwo(Context context) {
+		super(context);
+		
+		// TODO Auto-generated constructor stub
+	}
+	
+	
 	@Override
-	public View onCreateView(Context context,LayoutInflater inflater, ClipLayout container) {
+	public View onCreateView(Context context) {
 		// TODO Auto-generated method stub
-		View view = inflater.inflate(R.layout.layout_page2, null);
+		mContext = context;
+		View view = LayoutInflater.from(context).inflate(R.layout.layout_page2, null);
 		initComponent(view);
 		return view;
 	}
@@ -79,7 +84,7 @@ public class ClipPageTwo extends ClipPage implements OnClickListener{
 						@Override
 						public void onAnimationEnd(Animator arg0) {
 							// TODO Auto-generated method stub
-							ClipPageThree clipPage = new ClipPageThree();
+							ClipPageThree clipPage = new ClipPageThree(mContext);
 							clipPage.setCx(getClipLayout().getMeasuredWidth()/2);
 							clipPage.setCy(getClipLayout().getMeasuredHeight()/2);
 							getClipLayout().pushClipPage(clipPage);

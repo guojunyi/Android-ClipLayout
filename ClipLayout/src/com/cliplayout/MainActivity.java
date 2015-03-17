@@ -1,14 +1,12 @@
 package com.cliplayout;
 
-import com.cliplayout.widget.CircleButton;
-import com.cliplayout.widget.ClipLayout;
-import com.cliplayout.widget.ClipPage;
-
 import android.os.Bundle;
 import android.support.v4.app.FragmentActivity;
 import android.view.View;
 import android.view.View.OnClickListener;
-import android.widget.Button;
+
+import com.cliplayout.widget.CircleButton;
+import com.cliplayout.widget.ClipLayout;
 
 public class MainActivity extends FragmentActivity{
 
@@ -30,8 +28,7 @@ public class MainActivity extends FragmentActivity{
 			@Override
 			public void onClick(View v) {
 				// TODO Auto-generated method stub
-				
-				ClipPageOne clipPage = new ClipPageOne();
+				ClipPageOne clipPage = new ClipPageOne(MainActivity.this);
 				clipPage.setCx(button.getLeft()+button.getWidth()/2);
 				clipPage.setCy(button.getTop()+button.getHeight()/2);
 				layout_clip.pushClipPage(clipPage);
@@ -39,8 +36,7 @@ public class MainActivity extends FragmentActivity{
 			
 		});
 		
-		
-		
+
 	}
 	
 	@Override
