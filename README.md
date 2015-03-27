@@ -83,7 +83,7 @@ public class TestPage extends ClipPage{
 ``` java
 TestPage page = new TestPage();
 page.setCx(Screen.center.x);
-page.setCx(Screen.center.y);
+page.setCy(Screen.center.y);
 page.setDuration(300);
 layout_clip.pushClipPage(clipPage);
 ```
